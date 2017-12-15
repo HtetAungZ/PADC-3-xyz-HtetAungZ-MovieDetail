@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <ImageView
+                android:id="@+id/iv_king_arthur_background"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:fitsSystemWindows="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/king_arthur_background_image" />
+
+
+            <ImageView
+                android:id="@+id/iv_king_arthur_poster"
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/king_arthur_poster_image" />
+
+
+            <FrameLayout
+                android:id="@+id/fl_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/iv_king_arthur_poster"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorite_orange_48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="8.5"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_king_arthur_poster"
+                android:layout_alignEnd="@id/iv_king_arthur_poster"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_crop_free_white_36dp" />
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_king_arthur_poster"
+                android:layout_toRightOf="@id/iv_king_arthur_poster"
+                android:text="@string/king_arthur_content"
+                android:textColor="@color/white_full"
+                android:textSize="16sp" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/sv_intro"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/tv_content"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/iv_king_arthur_poster">
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/king_arthur_intro"
+                    android:textColor="@color/white_full" />
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <RatingBar
+                android:id="@+id/rb_king_arthur"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/fl_rating"
+                android:layout_below="@id/iv_king_arthur_poster"
+                android:layout_marginTop="14dp"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.4" />
+            />
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/fl_rating"
+                android:layout_below="@id/rb_king_arthur"
+                android:text="@string/release_date"
+                android:textColor="@color/white_full" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:layout_anchor="@id/iv_king_arthur_background"
+                app:layout_anchorGravity="bottom|right"
+                app:fabSize="normal"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rb_king_arthur"
+                android:backgroundTint="#e2552a"
+                android:src="@drawable/ic_add_white_36dp"
+
+                />
+
+                <android.support.v7.widget.Toolbar
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbar_title"
+                    android:layout_below="@id/tv_release_date"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/title"
+                        android:textColor="@color/white_full" />
+
+
+                </android.support.v7.widget.Toolbar>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/toolbar_title"
+                android:layout_marginLeft="14dp"
+                android:weightSum="6">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textColor="@color/black_full" />
+
+                <TextView
+                    android:id="@+id/padding_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="|"
+                    android:textColor="@color/white_full"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_adventure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Adventure"
+                    android:textColor="@color/black_full" />
+
+                <TextView
+                    android:id="@id/padding_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="|"
+                    android:textColor="@color/white_full"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_drama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Drama"
+                    android:textColor="@color/black_full" />
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fl_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_category">
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_crop_3_2_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="2 hrs 11 mins"
+                    android:textColor="@color/white_full"
+                    android:textSize="12sp" />
+
+
+            </FrameLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/rv_tralier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl_time"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_tralier"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/review"
+                android:textColor="@color/white_full"
+                android:textSize="14sp" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
