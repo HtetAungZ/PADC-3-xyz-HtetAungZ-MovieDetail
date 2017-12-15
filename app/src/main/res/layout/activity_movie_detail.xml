@@ -10,24 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+      >
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/background"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
+            android:fitsSystemWindows="true"
+           >
 
             <ImageView
-                android:id="@+id/iv_king_arthur_background"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:id="@+id/iv_king_arthur_background"
                 android:fitsSystemWindows="true"
-                android:background="@android:color/transparent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/king_arthur_background_image" />
+                android:src="@drawable/king_arthur_background_image"/>
 
 
             <ImageView
@@ -126,8 +125,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
-                app:layout_anchor="@id/iv_king_arthur_background"
-                app:layout_anchorGravity="bottom|right"
                 app:fabSize="normal"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/rb_king_arthur"
@@ -228,22 +225,29 @@
             <FrameLayout
                 android:id="@+id/fl_time"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="12dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_category">
 
+
                 <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:id="@+id/iv_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_crop_3_2_black_24dp" />
+                    android:src="@drawable/rectangle_orange"/>
+
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:text="2 hrs 11 mins"
                     android:textColor="@color/white_full"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
+
+
+
 
 
             </FrameLayout>
